@@ -1,0 +1,169 @@
+/* lesson 9 styles */
+.lorem {
+    color: red;
+    opacity: 70%;
+}
+.test-image {
+    width: 1000px;
+    height: 300px;
+    object-fit: cover;
+}
+/* bg image styles */
+.bg-image {
+    background-image: url('../images/lake.jpg');
+    height: 600px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-color: yellow;
+    background-size:cover;
+    background-position: top right;
+}
+
+/* pseudo elements */
+.hello::before {
+    content: 'Good Morning';
+    color:red;
+    font-size: 30px;
+}
+/* .hello::after {
+    content: '\00a9';
+} */
+.hello::after {
+    content: '';
+    width: 2px;
+    height: 30px;
+    background-color: blue;
+    display: inline-block;
+    margin-left: 30px;
+}
+.nav-a {
+    position: relative;
+}
+.nav-a::after {
+    content: "";
+    height: 1px;
+    width: 0%;
+    background-color: red;
+    position: absolute;
+    bottom:0;
+    left:0;
+    transition: all 0.7s;
+}
+.nav-a:hover::after {
+    width: 50%;
+}
+.nav-li {
+    margin-right: 30px;
+}
+.section-bg-image {
+    background-image: url('../images/mohamed-ajufaan-GFcWwwGNu_w-unsplash.jpg');
+    height: 324px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.section-bg-image::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: block;
+    opacity: 60%;
+
+}
+
+/* pseudo classes */
+.box-wraper {
+    display: flex;
+    justify-content: space-between;
+}
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: #40DDB6;
+}
+.box:first-child {
+    background-color: red;
+}
+.box:nth-child(2) {
+    background-color: yellow;
+}
+.box:nth-child(3) {
+    background-color: pink;
+}
+.box:last-child {
+    background-color: green;
+}
+.box:nth-child(3) .p-box{
+    color:#fff;
+}
+
+/* .box:nth-child(2n) {
+    background-color: grey;
+} */
+
+.d-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* header styles */
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-ul {
+    display: flex;
+}
+.navigation-parent {
+    display: flex;
+    background-color: lightsalmon;
+    align-items: center;
+}
+.button-wraper {
+    width: 184px;
+    height: 65px;
+    background-color: #6B77E5;
+    color:#fff;
+}
+.header-fixed {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    z-index: 50;
+    background-color: #fff;
+}
+body {
+    padding-top: 65px;
+}
+
+/* image car */
+.image-car {
+    height: 100px;
+    position: absolute;
+    animation: carmoveanimation 7s alternate infinite ease-in;
+    /* animation-name: carmove;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-direction:alternate; */
+}
+.image-car-wraper {
+    position: relative;
+    /* width: 100%;
+    background-color: yellow; */
+}
+
+
+/* keyframe */
+@keyframes carmoveanimation {
+    from {left:0px}
+    to {left:80%}
+}
+/* @keyframes carmoveanimation2 {
+    from {transform: translateX(0%);}
+    to {transform: translateX(100%);}
+} */
